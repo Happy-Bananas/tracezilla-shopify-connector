@@ -13,7 +13,9 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.8",
-        "laravel/tinker": "^3.0"
+        "laravel/tinker": "^3.0",
+        "ohmybrew/basic-shopify-api": "^11.0",
+        "phpclassic/php-shopify": "^1.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
