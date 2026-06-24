@@ -22,6 +22,7 @@ title: Tracezilla Shopify Connector
 email: max@synthmax.dk 
 description: An example Laravel application demonstrating how to integrate Shopify with Tracezilla.
 url: "https://happy-bananas.github.io"
+baseurl: "/tracezilla-shopify-connector"
 twitter_username: jekyllrb
 github_username:  maxgronlund
 
@@ -30,6 +31,10 @@ theme: just-the-docs
 color_scheme: dark
 plugins:
   - jekyll-feed
+
+
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
