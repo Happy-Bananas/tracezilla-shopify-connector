@@ -1,6 +1,6 @@
 # Tracezilla Shopify Connector
 
-An open-source Laravel application that synchronizes product catalogs from Shopify into Tracezilla.
+An example Laravel application demonstrating how to integrate Shopify with Tracezilla..
 
 The project serves both as a production-ready integration service and as a reference implementation for developers integrating Shopify with Tracezilla.
 
