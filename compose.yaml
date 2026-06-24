@@ -1,6 +1,8 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
     working_dir: /app
     volumes:
       - .:/app
@@ -21,5 +23,18 @@ services:
     volumes:
       - tracezilla_shopify_connector_postgres_data:/var/lib/postgresql/data
 
+  docs:
+    build:
+      context: .
+      dockerfile: docker/docs/Dockerfile
+    working_dir: /docs
+    volumes:
+      - ./docs:/docs
+      - tracezilla_shopify_connector_bundle:/usr/local/bundle
+    ports:
+      - "4000:4000"
+    command: bundle exec jekyll serve --host 0.0.0.0
+
 volumes:
   tracezilla_shopify_connector_postgres_data:
+  tracezilla_shopify_connector_bundle:
