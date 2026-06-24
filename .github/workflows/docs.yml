@@ -24,6 +24,9 @@ jobs:
         with:
           bundler-cache: true
           working-directory: docs
+          ruby-version: '3.4.2'
+          bundler-cache: true
+          working-directory: docs
 
       - uses: actions/configure-pages@v5
 
