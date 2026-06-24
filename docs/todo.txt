@@ -1,0 +1,22 @@
+docs/
+├── index.md
+├── getting-started.md
+├── installation.md
+├── configuration.md
+├── shopify/
+│   ├── overview.md
+│   ├── partner-account.md
+│   ├── development-store.md
+│   ├── custom-app.md
+│   └── credentials.md
+├── tracezilla/
+│   ├── overview.md
+│   └── credentials.md
+├── guides/
+│   ├── first-product-sync.md
+│   ├── sync-catalog.md
+│   └── troubleshooting.md
+└── architecture/
+    ├── overview.md
+    ├── clients.md
+    └── sync-flow.md
