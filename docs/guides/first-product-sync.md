@@ -1,6 +1,7 @@
 ---
 title: First Product Sync
-parent: Home
+parent: Guides 
+layout: default
 ---
 
 # First Product Sync
