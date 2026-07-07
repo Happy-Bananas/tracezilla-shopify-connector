@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Connectors;
+namespace App\Clients;
 
 use GuzzleHttp;
 use TracezillaSDK\TracezillaSDK;
 
-class TracezillaConnection
+class TracezillaClient
 {
     /**
      * Base url of tracezilla

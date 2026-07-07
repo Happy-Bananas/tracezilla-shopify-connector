@@ -34,12 +34,21 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    
+    'tracezilla' => [
+        'team_slug'                 => env('TRACEZILLA_TEAM_SLUG'),
+        'order_ref_prefix'          => env('TRACEZILLA_ORDER_REF_PREFIX'),
+        'customer_location_number'  => env('TRACEZILLA_CUSTOMER_LOCATION_NUMBER'),
+        'warehouse_location_number' => env('TRACEZILLA_WAREHOUSE_LOCATION_NUMBER'),
+        'order_tag'                 => env('TRACEZILLA_ORDER_TAG', 'Shopify'),
+        'sku_tag'                   => env('TRACEZILLA_SKU_TAG', 'Shopify'),
+    ],
+
     'shopify' => [
         'shop_url'      => env('SHOPIFY_SHOP_URL'),
         'client_id'     => env('SHOPIFY_CLIENT_ID'),
         'client_secret' => env('SHOPIFY_CLIENT_SECRET'),
         'scope'         => env('SHOPIFY_SCOPE', 'read_products'),
-
     ],
 
 ];

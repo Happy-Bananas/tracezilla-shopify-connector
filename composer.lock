@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59e9ff8ee3c8ffe8ebcf26836cb3b95e",
+    "content-hash": "2d0ae3d39b5ccbdc0d92ed55e1587ce8",
     "packages": [
         {
             "name": "brick/math",
@@ -281,6 +281,44 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
             "time": "2024-07-08T12:26:09+00:00"
+        },
+        {
+            "name": "djippothehippo/tracezilla-php-sdk",
+            "version": "dev-dev",
+            "dist": {
+                "type": "path",
+                "url": "./libraries/tracezilla-php-sdk",
+                "reference": "1d658404814b55fbd5852ac85f4acfbf6b704cb5"
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TracezillaSDK\\": "lib/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Rasmus K",
+                    "email": "hippomaster@djippo.com"
+                }
+            ],
+            "description": "PHP SDK for the tracezilla API",
+            "homepage": "https://github.com/djippothehippo/tracezilla-php-sdk",
+            "keywords": [
+                "PHP",
+                "SDK",
+                "tracezilla"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "doctrine/inflector",
@@ -8465,7 +8503,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "djippothehippo/tracezilla-php-sdk": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
