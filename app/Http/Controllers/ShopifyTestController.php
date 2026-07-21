@@ -3,10 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Clients\ShopifyClient;
+use App\GraphQL\Queries\GetProducts;
 use Throwable;
 
 class ShopifyTestController extends Controller
 {
+    public function createTestSkus(CreateTracezillaTestSkusFromShopify $action)
+{
+    try {
+        $result = $action->handle();
+
+        return view('tracezilla.test', [
+            'config' => config('services.tracezilla'),
+            'result' => [
+                'message' => 'Finished creating test SKUs from Shopify catalog.',
+                'response' => $result,
+            ],
+            'error' => null,
+        ]);
+    } catch (Throwable $e) {
+        return view('tracezilla.test', [
+            'config' => config('services.tracezilla'),
+            'result' => null,
+            'error' => $e->getMessage(),
+        ]);
+    }
+}
     public function show()
     {
         return view('shopify.test', [
@@ -26,7 +48,7 @@ class ShopifyTestController extends Controller
                 'config'   => config('services.shopify'),
                 'result'   => [
                     'message'    => 'Shopify connection created successfully.',
-                    'connection' => get_class($client->connection()),
+                    'connection' => get_class($client->http()),
                 ],
                 'products' => null,
                 'error'    => null,
@@ -46,12 +68,14 @@ class ShopifyTestController extends Controller
         try {
             $client = new ShopifyClient();
 
-            $products = $client
-                ->connection()
-                ->Product
-                ->get([
-                    'limit' => 10,
-                ]);
+            $result = $client->graphql(
+                GetProducts::QUERY,
+                [
+                    'first' => 10,
+                ]
+            );
+
+            $products = $result['data']['products']['nodes'];
 
             return view('shopify.test', [
                 'config'   => config('services.shopify'),

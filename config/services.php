@@ -36,12 +36,14 @@ return [
     ],
     
     'tracezilla' => [
+        'base_url'                  => env('TRACEZILLA_BASE_URL'),
         'team_slug'                 => env('TRACEZILLA_TEAM_SLUG'),
         'order_ref_prefix'          => env('TRACEZILLA_ORDER_REF_PREFIX'),
         'customer_location_number'  => env('TRACEZILLA_CUSTOMER_LOCATION_NUMBER'),
         'warehouse_location_number' => env('TRACEZILLA_WAREHOUSE_LOCATION_NUMBER'),
         'order_tag'                 => env('TRACEZILLA_ORDER_TAG', 'Shopify'),
         'sku_tag'                   => env('TRACEZILLA_SKU_TAG', 'Shopify'),
+        'api_key'                   => env('TRACEZILLA_API_KEY'),
     ],
 
     'shopify' => [

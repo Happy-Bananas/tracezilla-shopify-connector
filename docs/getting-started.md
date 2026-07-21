@@ -6,18 +6,18 @@ layout: default
 
 # Getting Started
 
-Welcome! This guide will help you get the Tracezilla Shopify Connector running on your local machine.
+Welcome! This guide will help you get the tracezilla Shopify Connector running on your local machine.
 
 By the end of this guide, you will have:
 
 * The application running locally.
 * PostgreSQL up and running.
 * The documentation site available locally.
-* The project configured and ready to connect to Shopify and Tracezilla.
+* The project configured and ready to connect to Shopify and tracezilla.
 
-No prior knowledge of Shopify or Tracezilla is required.
+No prior knowledge of Shopify or tracezilla is required.
 
-⸻
+---
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ To follow this guide, you will need:
 
 The project ships with a Docker-based development environment to make getting started easy. If you prefer, you can run the application using your own PHP and database setup.
 
-⸻
+---
 
 ## Clone the Repository
 
@@ -39,7 +39,7 @@ git clone https://github.com/Happy-Bananas/tracezilla-shopify-connector.git
 cd tracezilla-shopify-connector
 ```
 
-⸻
+---
 
 ## Start the Application
 
@@ -58,7 +58,7 @@ Service	URL
 
 The first startup may take a few moments while Docker builds the containers.
 
-⸻
+---
 
 # Configure the Application
 
@@ -73,11 +73,11 @@ The application can be configured through environment variables, including:
 * Application settings
 * Database connection
 * Shopify credentials
-* Tracezilla credentials
+* tracezilla credentials
 
 The exact configuration values will be covered in the next guides.
 
-⸻
+---
 
 Verify the Installation
 
@@ -86,11 +86,11 @@ You should now be able to:
 * ✅ Open the Laravel application.
 * ✅ Open the documentation site.
 * ✅ Connect to PostgreSQL.
-* ✅ Continue configuring the Shopify and Tracezilla integrations.
+* ✅ Continue configuring the Shopify and tracezilla integrations.
 
 If something is not working as expected, see the Troubleshooting guide.
 
-⸻
+---
 
 Next Steps
 
@@ -100,7 +100,7 @@ Continue with:
 
 1. Create a Shopify Development Store
 2. Create a Shopify Custom App
-3. Configure Tracezilla Credentials
+3. Configure tracezilla Credentials
 4. Run Your First Product Synchronization
 
 Happy coding! 🚀

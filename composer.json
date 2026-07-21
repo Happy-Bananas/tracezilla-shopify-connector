@@ -2,7 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "tracezilla/tracezilla-shopify-connector",
     "type": "project",
-    "description": "Synchronize Shopify catalogs with Tracezilla.",
+    "description": "Synchronize Shopify catalogs with tracezilla.",
     "keywords": [
         "tracezilla",
         "shopify",
@@ -12,11 +12,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "djippothehippo/tracezilla-php-sdk": "@dev",
         "laravel/framework": "^13.8",
-        "laravel/tinker": "^3.0",
-        "ohmybrew/basic-shopify-api": "^11.0",
-        "phpclassic/php-shopify": "^1.2"
+        "laravel/tinker": "^3.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -88,12 +85,6 @@
             "php-http/discovery": true
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./libraries/tracezilla-php-sdk"
-        }
-    ],
     "minimum-stability": "stable",
     "prefer-stable": true
 }

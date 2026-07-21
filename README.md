@@ -1,19 +1,19 @@
 <p align="center">
   <img src="laravel-shopify-tracezilla-light.svg#gh-light-mode-only"
-       alt="Tracezilla Shopify Connector"
+       alt="tracezilla Shopify Connector"
        width="600">
 
   <img src="laravel-shopify-tracezilla-dark.svg#gh-dark-mode-only"
-       alt="Tracezilla Shopify Connector"
+       alt="tracezilla Shopify Connector"
        width="600">
 </p>
 
-# Tracezilla Shopify Connector
+# tracezilla Shopify Connector
 
-A Laravel reference implementation demonstrating how to integrate Shopify with the Tracezilla API.
+A Laravel reference implementation demonstrating how to integrate Shopify with the tracezilla API.
 
  ### ⚠️ Important
-> Before you can connect to Shopify and Tracezilla, you must have valid accounts with both services..<br/>
+> Before you can connect to Shopify and tracezilla, you must have valid accounts with both services..<br/>
 there is guide for both in the documentation 
 
 

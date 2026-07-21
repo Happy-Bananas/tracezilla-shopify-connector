@@ -1,11 +1,13 @@
 ---
-title: Custom App
-parent: Shopify
-nav_order: 120
+title: Authorize API
+parent: Shopify Configuration
+nav_order: 220
 layout: default
 ---
 
 # Create custom app
+
+Beforre you can connect the application to Shopify you need an app and to connect it to a shop.
 
 [Go to the Shopify development dashboard](https://dev.shopify.com/dashboard){: .btn .btn-primary }
 
@@ -48,8 +50,7 @@ Give the app version a meaningful name, then click the Release button in the top
 
 If you later need to change the scopes, you must create and release a new app version.
 
-{: .warning }
-⚠️ If you update the scopes, you may need to rotate your credentials before the changes take effect.
+> ⚠️ If you update the scopes, you may need to rotate your credentials before the changes take effect.
 
 ---
 ## Get credentials / Rotate credentials
@@ -66,10 +67,10 @@ from the sidebar.
 ------------------------------------------------------------------------
 
 This is where you will find the **Client ID** and **Client Secret**
-required to integrate your catalog with the Tracezilla API. Copy them
+required to integrate your catalog with the tracezilla API. Copy them
 and store them in a safe place.
 
-{: .warning } \> ⚠️ Your app will not be authorized until it has been
+> ⚠️ Your app will not be authorized until it has been
 installed on a store.
 
 ------------------------------------------------------------------------
@@ -84,6 +85,7 @@ retrieve data from Shopify.
     src="{{ '/assets/images/shopify/0-installs.png' | relative_url }}"
     alt="Install app"
     width="595">
+
 When you click on the app, select **Install app**.
 
 <img
@@ -98,8 +100,8 @@ from which the app will retrieve products.
     src="{{ '/assets/images/shopify/select-store.png' | relative_url }}"
     alt="Select store"
     width="527">
-Confirm the installation.
 
+Confirm the installation.
 
 <img
     src="{{ '/assets/images/shopify/confirm-installation.png' | relative_url }}"

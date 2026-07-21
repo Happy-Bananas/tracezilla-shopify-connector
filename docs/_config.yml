@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tracezilla Shopify Connector
+title: tracezilla Shopify Connector
 email: max@synthmax.dk 
-description: An example Laravel application demonstrating how to integrate Shopify with Tracezilla.
+description: An example Laravel application demonstrating how to integrate Shopify with tracezilla.
 url: "https://happy-bananas.github.io"
 baseurl: "/tracezilla-shopify-connector"
 twitter_username: jekyllrb

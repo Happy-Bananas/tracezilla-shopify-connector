@@ -2,18 +2,18 @@
 
 namespace App\Clients;
 
+use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
-use PHPShopify\ShopifySDK;
 
 class ShopifyClient
 {
     /**
-     * Shopify shop url.
+     * Shopify shop URL.
      */
     protected string $shopUrl;
 
     /**
-     * Shopify client id.
+     * Shopify client ID.
      */
     protected string $clientId;
 
@@ -23,14 +23,14 @@ class ShopifyClient
     protected string $clientSecret;
 
     /**
-     * Shopify warehouse id.
+     * Shopify warehouse ID.
      */
     protected ?string $warehouseId;
 
     /**
-     * Shopify SDK connection.
+     * Authenticated HTTP client.
      */
-    protected ShopifySDK $connection;
+    protected PendingRequest $http;
 
     public function __construct()
     {
@@ -44,23 +44,48 @@ class ShopifyClient
         $response = Http::asForm()->post(
             "https://{$this->shopUrl}/admin/oauth/access_token",
             [
-                'grant_type' => 'client_credentials',
-                'client_id' => $this->clientId,
+                'grant_type'    => 'client_credentials',
+                'client_id'     => $this->clientId,
                 'client_secret' => $this->clientSecret,
-                'scope' => $config['scope'],
+                'scope'         => $config['scope'],
             ]
         );
 
         $payload = $response->throw()->json();
 
-        $this->connection = new ShopifySDK([
-            'ShopUrl' => $this->shopUrl,
-            'AccessToken' => $payload['access_token'],
-        ]);
+        $this->http = Http::baseUrl(
+                "https://{$this->shopUrl}/admin/api/2025-10"
+            )
+            ->acceptJson()
+            ->withHeaders([
+                'X-Shopify-Access-Token' => $payload['access_token'],
+            ]);
     }
 
-    public function connection(): ShopifySDK
+    /**
+     * Get authenticated HTTP client.
+     */
+    public function http(): PendingRequest
     {
-        return $this->connection;
+        return $this->http;
+    }
+
+    public function graphql(string $query, array $variables = []): array
+    {
+        $payload = [
+            'query' => $query,
+        ];
+
+        if (!empty($variables)) {
+            $payload['variables'] = $variables;
+        }
+
+        return $this->http
+            ->post('/graphql.json', $payload)
+            ->throw()
+            ->json();
     }
 }
+
+// $client = new App\Clients\ShopifyClient();
+// $response = $client->http()->get('/shop.json');

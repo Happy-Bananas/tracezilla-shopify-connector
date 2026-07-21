@@ -6,7 +6,7 @@
 
         <a href="{{ route('home') }}" class="flex items-center space-x-3">
             <span class="self-center text-2xl font-semibold whitespace-nowrap">
-                Tracezilla Shopify Connector
+                tracezilla Shopify Connector
             </span>
         </a>
 
@@ -46,6 +46,18 @@
                                 ? 'text-blue-700'
                                 : 'text-gray-900 hover:text-blue-700' }}">
                         Shopify Test
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="{{ route('tracezilla.test') }}"
+                        class="block py-2 px-3 md:p-0
+                            {{ request()->routeIs('tracezilla.test')
+                                ? 'text-blue-700'
+                                : 'text-gray-900 hover:text-blue-700' }}">
+                        tracezilla Test
                     </a>
                 </li>
                 
